@@ -1,17 +1,17 @@
 {% set name = "adtk" %}
-{% set version = "0.5.5" %}
+{% set version = "0.6.0" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: 4318d18d77f26767ab61f5224c791a876bbc1e9cc34ebf2be92e8a6c86bbb1f3
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 9cda694495c34695dfc258639bb9a6f1755a62b349cb8b4427584f5efb914cf8
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
   noarch: python
 
 requirements:
@@ -34,10 +34,10 @@ test:
 
 about:
   home: https://github.com/arundo/adtk
-  license: "MPL-2.0"
+  license: MPL-2.0
   license_family: MOZILLA
   license_file: LICENSE
-  summary: "A package for unsupervised time series anomaly detection"
+  summary: A package for unsupervised time series anomaly detection
   description: |
     This package offers a set of common detectors, transformers and aggregators
     with unified APIs, as well as pipe classes that connect them together into 
