@@ -1,5 +1,5 @@
 {% set name = "adtk" %}
-{% set version = "0.6.0" %}
+{% set version = "0.6.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 9cda694495c34695dfc258639bb9a6f1755a62b349cb8b4427584f5efb914cf8
+  sha256: 6cfafb44b5ad26a2ffd640aeb79d84fc5383d2d42c97a47420695badbee27be8
 
 build:
   number: 0
